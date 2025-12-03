@@ -12,3 +12,11 @@
     JavaScript engine. It allows developers to run 
     kJavaScript on the server side, creating server-side 
     applications with JavaScript.
+
+
+
+
+    There are many things like dom related and windoe related 
+    things ar not in the node js because we don't need this in our server side 
+
+    
