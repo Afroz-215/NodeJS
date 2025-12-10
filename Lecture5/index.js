@@ -4,12 +4,11 @@ const fs = require("fs");
 
 // const myServer =http.createServer((req,res)=>{
 //     // console.log("req received");
-//     console.log(req);
+//     console.log(req.--);
 //     res.end("hello from server");
 // });
 
 const myServer = http.createServer((req, res) => {
-    if(req.url =="/favicon") res.end();
     const log = `${Date.now()}: New Request Received on ${req.url} \n`;
     
     fs.appendFile("Log.txt", log, (err, data) => {
@@ -20,6 +19,9 @@ const myServer = http.createServer((req, res) => {
                 break;
             case "/about":
                 res.end("I am Afroz");
+                break;
+            case "/favicon":
+                res.end("I am Afroz again");
                 break;
             default:
                 res.end("404 not found");
