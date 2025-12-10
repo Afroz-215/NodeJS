@@ -1,0 +1,11 @@
+URL - UNIFORM RESOURCE LOCATOR 
+
+https://www.google.com/search?q=js+interview+...&...
+
+
+web socket for protocol
+
+protocol
+domain 
+path
+query parameter

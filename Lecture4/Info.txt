@@ -1,0 +1,37 @@
+User - A client to a server 
+
+
+All request goes to event queue 
+
+Client -request--> server (Store in event queue )
+                                 |
+                                 |
+                            Event Loop   (pic request to solve in FIFO order)
+                                / \
+                               /   \
+                              /     \
+          Blocking Operations         Non-Blocking Operations
+          (Synchronous Task )           (Asynchronous Task)
+                    |                         |
+                    |                      Perform Operation
+         I need a thread                      |
+         (Assign a worker and              Complete  
+         make him work)
+                    |
+                    |
+               Thread Pool 
+                   / \
+                  /   \
+                 /     \
+         Available       Wait for availability
+             |                      |
+    Solve problem                Available     
+        |                            | 
+  Return Result                   Solve problem
+      |                                |
+Sit back in Thread Pool           Return Result 
+                                         |
+                                   Sit back in Thread Pool      
+                                   
+Default threads - 4
+Max ? - if 8 core cpu - then 8

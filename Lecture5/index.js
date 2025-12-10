@@ -9,7 +9,9 @@ const fs = require("fs");
 // });
 
 const myServer = http.createServer((req, res) => {
+    if(req.url =="/favicon") res.end();
     const log = `${Date.now()}: New Request Received on ${req.url} \n`;
+    
     fs.appendFile("Log.txt", log, (err, data) => {
         // res.end("hello from server again");
         switch (req.url) {
