@@ -34,4 +34,4 @@ Sit back in Thread Pool           Return Result
                                    Sit back in Thread Pool      
                                    
 Default threads - 4
-Max ? - if 8 core cpu - then 8
+Max ? - if 8 core cpu - then 8  (Depends machine to machine )
