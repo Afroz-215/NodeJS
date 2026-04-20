@@ -5,7 +5,7 @@ https://www.google.com/search?q=js+interview+...&...
 
 web socket for protocol
 
-protocol
-domain 
-path
-query parameter
+protocol - https(hyper text transfer protocol secure)
+domain -www.google.com (A user friendly nme of ip address of server)
+path -/search
+query parameter - q(query)=js+in.... (extra information we can pass with our URL )k
