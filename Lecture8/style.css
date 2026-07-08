@@ -1,0 +1,408 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f4f7fb;
+    color:#333;
+}
+
+/* ================= Navbar ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    background:#0f172a;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+}
+
+.logo{
+    font-size:30px;
+    cursor:pointer;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-size:17px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:#38bdf8;
+}
+
+/* ================= Hero ================= */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:50px;
+    background:linear-gradient(135deg,#2563eb,#06b6d4);
+    color:white;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:58px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    line-height:35px;
+    margin-bottom:35px;
+}
+
+.hero button{
+    padding:15px 35px;
+    border:none;
+    border-radius:8px;
+    background:white;
+    color:#2563eb;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.hero button:hover{
+    transform:scale(1.08);
+}
+
+/* ================= Services ================= */
+
+.services{
+    padding:80px 8%;
+}
+
+.services h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+}
+
+.service-container{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+}
+
+.card{
+    flex:1;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#2563eb;
+}
+
+.card p{
+    color:#666;
+    line-height:28px;
+}
+
+/* ================= About ================= */
+
+.about{
+    background:white;
+    padding:80px 10%;
+    text-align:center;
+}
+
+.about h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about p{
+    max-width:850px;
+    margin:auto;
+    line-height:35px;
+    color:#555;
+    font-size:18px;
+}
+
+/* ================= Footer ================= */
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer p{
+    margin:10px 0;
+}
+
+/* ================= Tablet ================= */
+
+@media(max-width:992px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .service-container{
+        flex-wrap:wrap;
+    }
+
+    .card{
+        min-width:300px;
+    }
+
+}
+
+/* ================= Mobile ================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        padding:20px;
+    }
+
+    .nav-links{
+        flex-direction:column;
+        align-items:center;
+        gap:18px;
+    }
+
+    .hero{
+        min-height:auto;
+        padding:70px 20px;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero p{
+        font-size:16px;
+        line-height:28px;
+    }
+
+    .hero button{
+        width:180px;
+    }
+
+    .services{
+        padding:60px 20px;
+    }
+
+    .services h2{
+        font-size:32px;
+    }
+
+    .service-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .card{
+        width:100%;
+        max-width:350px;
+    }
+
+    .about{
+        padding:60px 20px;
+    }
+
+    .about h2{
+        font-size:32px;
+    }
+
+    .about p{
+        font-size:16px;
+        line-height:30px;
+    }
+
+}
+
+/* ================= Small Mobile ================= */
+
+@media(max-width:480px){
+
+    .logo{
+        font-size:26px;
+    }
+
+    .hero h1{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .hero button{
+        width:160px;
+        padding:12px;
+    }
+
+    .services h2,
+    .about h2{
+        font-size:28px;
+    }
+
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+    padding:80px 8%;
+    background:#f4f7fb;
+}
+
+.faq h2{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#222;
+}
+
+.faq-container{
+    max-width:850px;
+    margin:auto;
+}
+
+.faq-container details{
+    background:#fff;
+    margin-bottom:18px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.faq-container details:hover{
+    transform:translateY(-2px);
+}
+
+.faq-container summary{
+    padding:18px 22px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:600;
+    list-style:none;
+    position:relative;
+}
+
+.faq-container summary::-webkit-details-marker{
+    display:none;
+}
+
+.faq-container summary::after{
+    content:"+";
+    position:absolute;
+    right:25px;
+    font-size:24px;
+    color:#2563eb;
+    transition:.3s;
+}
+
+.faq-container details[open] summary::after{
+    content:"−";
+}
+
+.faq-container p{
+    padding:0 22px 20px;
+    color:#555;
+    line-height:28px;
+    font-size:16px;
+}
+
+/* ================= Responsive ================= */
+
+@media(max-width:768px){
+
+    .faq{
+        padding:60px 20px;
+    }
+
+    .faq h2{
+        font-size:32px;
+    }
+
+    .faq-container summary{
+        font-size:17px;
+        padding:16px 18px;
+    }
+
+    .faq-container p{
+        font-size:15px;
+        line-height:26px;
+        padding:0 18px 18px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .faq h2{
+        font-size:28px;
+    }
+
+    .faq-container summary{
+        font-size:16px;
+        padding:15px;
+    }
+
+    .faq-container p{
+        font-size:14px;
+    }
+
+}
