@@ -1,5 +1,5 @@
 // module=> fs => os 
-const fs =require("fs");
+const fs = require("fs");
 //console.log(fs);
 
 
@@ -31,7 +31,7 @@ const fs =require("fs");
 // fs.appendFile("test.txt","\nhey from async",(err)=>{
 //     if(err) throw err;
 //     else console.log("file appended");
-    
+
 // })
 
 //sync 
@@ -83,7 +83,58 @@ const fs =require("fs");
 // fs.mkdirSync("my-docs",{recursive:true});
 
 //async 
-fs.mkdir("my-docss/a/b",{recursive: true },(err)=>{
-    if(err) console.log(err);
-    else console.log("successfully created ")
-})
+// fs.mkdir("my-docss/a/b", { recursive: true }, (err) => {
+//     if (err) console.log(err);
+//     else console.log("successfully created ")
+// })
+
+// let operation = process.argv[2];
+
+// if (operation == 'write'){
+//     let name = process.argv[3];
+// let content = process.argv[4];
+// let data = fs.writeFileSync(name, content);
+// console.log(name, content, data);
+// } else if (operation == 'read'){
+//     let name =process.argv[3];
+//     // let content = process.argv[4];
+//     let data =fs.readFileSync(name,'utf-8');
+//     console.log(name,content,data);
+// }
+
+
+// let fs = require("fs");
+
+let operation = process.argv[2];
+
+if (operation == "write") {
+
+    let name = process.argv[3];
+    let content = process.argv[4];
+
+    fs.writeFileSync(name, content);
+    console.log("File Created Successfully");
+
+}
+else if (operation == "read") {
+
+    let name = process.argv[3];
+    let content = process.argv[4];
+
+    let data = fs.readFileSync(name, "utf-8");
+    console.log(data);
+
+}
+else if (operation == 'update'){
+    let name =process.argv[3];
+    let content =process.argv[4];
+    fs.appendFileSync(name,content);
+    let data = fs.readFileSync(name,'utf-8');
+
+    console.log(data);
+}
+else if(operation == 'delete'){
+ let name =process.argv[3];
+//  let content =process.argv[4];
+ fs.unlinkSync(name);
+}
