@@ -177,4 +177,35 @@
 
 // Template Engine //
 
-let express = require('expres');
+let express = require('express');
+let app =express();
+app.set('view engine','ejs');
+app.use(express.urlencoded({extended:false}));
+
+app.get('/',(req,res)=>{
+    // res.send()
+    // res.render('home');
+    res.render('home',{name : 'Afroz', Position : 'Software Developer',Salary : '50k'});
+
+});
+
+
+app.get('/add-user',(req,res)=>{
+    res.render('Adduser');
+})
+
+app.post('/submit',(req,res)=>{
+    console.log(req.body);
+    res.render('Submituser',req.body);
+})
+
+app.get('/users',(req,res)=>{
+    const users =['neha','nisha','radhika','damini'];
+    const isLogin =false;
+    res.render('Users',{users: users,n: users.length,isLogin: isLogin
+    });
+})
+
+app.listen(5500, ()=>{
+    console.log("Server is listening on port no. 5500")
+})
